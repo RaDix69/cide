@@ -9,7 +9,7 @@
 <body>
     <?php 
     
-    ECHO 'INICIO';
+    ECHO 'INICIO';aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
     
     ?>
 </body>

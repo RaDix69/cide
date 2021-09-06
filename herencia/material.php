@@ -18,7 +18,7 @@ class Material extends Biblioteca{
      function setCodigo($codigo){
      $this->codigo=$codigo;
     }
-     function setTitulo($ficha){
+     function setTitulo($titulo){
      $this->titulo=$titulo;
     }
      function getTipo(){
