@@ -8,12 +8,13 @@ v=[];
 x=5;
 
 /*       ----------------------- promedio -------------- */
-/*console.log(vec(v,x));
+/*console.log(vec(v,x));*/
 var arr= vec(v,x); 
+arr = [15,8,11,2,19];
 let suma = arr.reduce((previous, current) => current += previous);
 let avg = suma/arr.length;
 console.log(avg);
-*/
+
 
 
 /* ----------------- mediana --------------------- */

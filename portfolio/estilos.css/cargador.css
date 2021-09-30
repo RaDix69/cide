@@ -85,24 +85,33 @@ body{
 .div-contenido{
     position: relative;
     width: 100%;
-
 }
-.contenido-nav{
 
+.contenido-nav.active{
     position: fixed;
     width: 300px;
     height: 100%;
     border-right: 1px solid rgba(255, 255, 255,.05);
     background: var(--black2);
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
-    z-index: 1;
+    z-index:1;
     transition: width 0.5s;
+
 }
-.contenido-nav.active{
-    width:0;
+.contenido-nav{
+    position: fixed;
+    width: 0px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-right: 1px solid rgba(255, 255, 255,.05);
+    align-items: center;
+    overflow: hidden;
+    z-index:1;
+    transition: width 0.5s;
 }
 .contenido-nav ul{
     position: relative;
@@ -130,13 +139,13 @@ body{
     letter-spacing: 2px;
     opacity: 0.5;
 }
-.contenido-nav ul li a:hover{
+.contenido-nav.active ul li a:hover{
     opacity: 1;
 }
 
 /* ---------------------------------------- fin nav ------------------------------------------ */
 /* ---------------------------------------- topbar ------------------------------------------ */
-.contenido-main{
+.contenido-main.active{
     position: absolute;
     width: calc(100% - 300px);
     left: 300px;
@@ -145,11 +154,16 @@ body{
     transition: width 0.5s, left 0.5s;
 
 }
-.contenido-main.active{
+.contenido-main{
+    position: absolute;
     width: 100%;
     left: 0px;
+    background: var(--black);
+    min-height: 100vh;
+    transition: width 0.5s, left 0.5s;
+
 }
-.contenido-main .contenido-main__topbar{
+.contenido-main .contenido-main__topbar.active{
     position: fixed;
     top: 0;
     width: calc(100% - 300px);
@@ -164,10 +178,23 @@ body{
     align-items: center;
     z-index: 10000;
     transition: width 0.5s, left 0.5s;
+
+    
 }
-.contenido-main .contenido-main__topbar.active{
+.contenido-main .contenido-main__topbar{
+    position: fixed;
     width: 100%;
     left: 0px;
+    background:var(--black2);
+    border-left: 1px solid rgba(255, 255, 255,.05);
+    border-bottom: 1px solid rgba(255, 255, 255,.05);
+    height: 60px ;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+    transition: width 0.5s, left 0.5s;    
 }
 .contenido-main .contenido-main__topbar .contenido-main-topbar__logo{
     color: var(--white);
