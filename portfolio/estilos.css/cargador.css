@@ -5,17 +5,28 @@ body{
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    background: #12090c;
+    background: #0E0B16;
     font-family: 'Scheherazade New', serif;
+    font-size: 1.2em;
 }
 :root{
-    --white: #b5d7eb;
-    --white2: #b5d7eb;
-    --black:#12090c;
-    --black2:#12090c;    
+    --white: #E7DFDD;
+    --white2: #E7DFDD;
+    --black:#0E0B16;
+    --black2:#0E0B16;
+    --fuschia:#a239ca;
+    --fuschia2:#a239ca;
+    --azul:#4717f6;
+    --azul2:#4717f6;
+
+
 }
+
+
 body{
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
 }
 /* ----------------------------------------cargador ------------------------------------------ */
 .div-cargador{
@@ -98,7 +109,7 @@ body{
     align-items: center;
     overflow: hidden;
     z-index:1;
-    transition: width 0.5s;
+    transition: width 0.5s ,left 0.5s;
 
 }
 .contenido-nav{
@@ -134,10 +145,10 @@ body{
     display: flex;
     text-transform: uppercase;
     text-decoration: none;
-    color:var(--white);
+    color:var(--fuschia);
     font-weight: 500;
     letter-spacing: 2px;
-    opacity: 0.5;
+    opacity: 0.8;
 }
 .contenido-nav.active ul li a:hover{
     opacity: 1;
@@ -197,7 +208,7 @@ body{
     transition: width 0.5s, left 0.5s;    
 }
 .contenido-main .contenido-main__topbar .contenido-main-topbar__logo{
-    color: var(--white);
+    color: var(--fuschia);
     font-weight: 700;
     text-decoration: none;
     font-size: 1.4;
@@ -210,7 +221,7 @@ body{
     height: 60px;
     right: 50px;
     cursor: pointer;
-    color: var(--white);
+    color: var(--fuschia);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -299,30 +310,33 @@ h3{
     font-size:1.2em ;
 }
 .banner__socialMedia li a:hover{
-    background: var(--white);
-    color: #000;
+    background: var(--fuschia);
+    color: var(--black);
 }
 .adjust{
     position: relative;
     min-height: 100vh;
+    width: 95%;
+
     padding: 0 40px;
     padding-top: 80px;
     background: (var(--black));
     color: var(--white);
     display: inline-block;
+
 }
-.about__titulo{
+.titulo{
     width: 100%;
     text-align: center;
 }
-.about__titulo h2{
+.titulo h2{
     position: relative;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 1.2em;
     margin-bottom: 30px;
 }
-.about__titulo h2::before{
+.titulo h2::before{
     content: '';
     position: absolute;
     left: 50%;
@@ -345,4 +359,266 @@ h3{
 }
 .about .about__contenedor .imgBx img{
     max-width: 100%;
+}
+
+/* ------------------------------------- fin baner---------------------------*/
+
+/* -------------------------------------servicios---------------------------*/
+
+.services .services__content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+    margin: 40px 0;
+}
+.services .services__content .services-content__serviceBox{
+    border: 1px solid rgba(255, 255, 255,.1);
+    padding: 50px 20px;
+    display: flex;
+    background: var(--black2);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services .services__content .services-content__serviceBox img{
+    max-width: 200px;
+
+}
+.services .services__content .services-content__serviceBox h2{
+    font-size: 1.1em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--fuschia);
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+.services .services__content .services-content__serviceBox p{
+    text-align: center;
+}
+/* ------------------------------------- fin servicios---------------------------*/
+/* -------------------------------------proyectos---------------------------*/
+.proyect .protect_content{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+    margin: 40px 0;
+}
+.proyect .protect_content .trabajoBx{
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.proyect .protect_content .trabajoBx .imgBX{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: 0.5s ease-in-out;
+}
+.proyect .protect_content .trabajoBx:hover .imgBX{
+    transform: translateY(-100%);
+}
+.proyect .protect_content .trabajoBx .imgBX img{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.proyect .protect_content .trabajoBx .textBx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    transition: 0.5s ease-in-out;
+}
+
+.proyect .protect_content .trabajoBx:hover .textBx{
+    transform: translateY(0);
+}
+.proyect .protect_content .trabajoBx .textBx h3{
+    color: #000;
+    font-size: 1em;
+}
+/* ------------------------------------- fin proyectos---------------------------*/
+/* -------------------------------------contacto---------------------------*/
+.contact{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+.contact .contactform{
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+.contact .contactform .linea{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:20px;
+    margin-top: 20px;
+}
+
+.contact .contactform .linea2{
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 20px;
+}
+
+.contact .contactform .linea input,
+.contact .contactform .linea2 textarea{
+    width: 90%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    color: var(--white);
+    background: var(--azul);
+    font-size: 18px;
+    border: 1px solid var(--fuschia);
+    
+}
+::placeholder{
+    color: var(--white);
+}
+.contact .contactform .linea2 textarea{
+    resize: none;
+    height: 200px;
+}
+
+.contact .contactform .linea2 input[type="submit"]{
+    background: var(--azul2);
+    color: var(--white); 
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    max-width: 150px;
+    border: none;
+}
+.contact .contactform .linea2 input[type="submit"]:hover{
+    background: var(--white);
+    color: var(--azul2); 
+    padding: 10px 30px;
+    display: inline-block;
+    font-weight: 500;
+    letter-spacing: 2px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+    max-width: 150px;
+    border: none;
+}
+
+/* ------------------------------------- fin contacto---------------------------*/
+
+/* -------------------------------------copyright---------------------------*/
+
+.copyright{
+    margin-top: 10px;
+    border-top:1px solid var(--fuschia) ;
+    position: relative;
+    bottom: 0;
+    padding:10px 40px ;
+    text-align: center;
+    color: var(--white);
+}
+/* -------------------------------------fin copyright---------------------------*/
+/* -------------------------------------responsive---------------------------*/
+@media(max-width: 992px)
+{
+    .contenido-nav{
+        left: -100%;
+    }
+    .contenido-nav.active{
+        left: 0;
+        width: 100%;
+    }
+    .contenido-main.active{
+        left: 100%;
+    }
+    
+    .contenido-main{
+        left: 0;
+        width: 100%;
+    }
+    .contenido-main .contenido-main__topbar.active{
+        left: 0;
+        width: 100%;
+        padding: 0 40px;
+    }
+    .contenido-nav ul {
+        padding:20px 40px ;
+    }
+    .banner .banner-contenedor__imgBx{
+        width: 250px;
+        height: 250px;
+    }
+    .banner h3, .banner p{
+        text-align: center;
+    }
+    .adjust{
+        padding: 0 20px;
+        padding-top: 80px;
+    }
+    .about .about__contenedor{
+        flex-direction: column;
+    }
+    .about .about__contenedor .texto{
+        width: 100%;
+        min-width: 100%;
+    }
+    .about .about__contenedor .imgBx {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+    .services .services__content {
+        grid-template-columns: repeat(2,1fr);
+        margin-right: 20px;
+
+    }
+    .proyect .protect_content{
+        grid-template-columns: repeat(2,1fr);
+        margin-right: 20px;
+
+    }
+}
+@media(max-width: 767px)
+{
+    .services .services__content {
+        grid-template-columns: repeat(1,1fr);
+        margin-right: 20px;
+    }
+    .proyect .protect_content{
+        grid-template-columns: repeat(1,1fr);
+        margin-right: 20px;
+    }
+    .contact .contactform .linea,
+    .contact .contactform .linea2 textarea{
+        width: 100%;
+        grid-template-columns: repeat(1,1fr);
+        margin-right: 10px;
+    }
+    .copyright{
+        margin-top: 50px;
+    }
 }

@@ -9,7 +9,15 @@ toggle.onclick = function(){
     contenido.classList.toggle('active');
     nav.classList.toggle('active');
     main.classList.toggle('active');
+}
 
-
+//////// arreglo de nav resposive /////////
+function toggleMenu(){
+    let toggle = document.querySelector('.contenido-main-topbar-toggle');
+    let nav = document.querySelector('.contenido-nav');
+    let main = document.querySelector('.contenido-main');
+    toggle.classList.remove('active');
+    nav.classList.remove('active');
+    main.classList.remove('active');
 
 }

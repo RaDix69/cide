@@ -25,12 +25,11 @@
     <div id="div-contenido" class="hide">
         <div class="contenido-nav">
             <ul>
-                <li><a href="#banner">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Projectos</a></li>
-                <li><a href="#">info</a></li>
-                <li><a href="#">Contacto</a></li>
+                <li><a href="#banner"  onclick="toggleMenu();">Home</a></li>
+                <li><a href="#about"  onclick="toggleMenu();">About</a></li>
+                <li><a href="#services"  onclick="toggleMenu();">Servicios</a></li>
+                <li><a href="#proyectos"  onclick="toggleMenu();">Projectos</a></li>
+                <li><a href="#contacto"  onclick="toggleMenu();">Contacto</a></li>
             </ul>
         </div>
     <!-------------------------------------- fin nav --------------------------------->
@@ -66,7 +65,7 @@
     <!-------------------------------------- fin banner --------------------------------->
     <!-------------------------------------- about --------------------------------->
     <section class="about adjust" id="about">
-        <div class="about__titulo">
+        <div class="titulo">
             <h2>Mas sobre mi</h2>
         </div>
         <div class="about__contenedor">
@@ -75,7 +74,98 @@
             <img src="img/img.jpg" alt="">
         </div>
     </section>
+    <!-------------------------------------- fin about --------------------------------->
+    <!-------------------------------------- servicios --------------------------------->
+    <section class="services adjust" id="services">
+        <div class="titulo">
+            <h2>Servicios</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing ecessitatibus nemo accusantium iusto sed suscipit cum labore! Eum odio accusamus quia maiores?</p>
+        </div>
+        <div class="services__content">
+            <div class="services-content__serviceBox">
+                <img src="img/diseñador-web.svg" alt="">
+                <h2>Diseñador Web</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id dolor atque illo fugiat accusantium dolorem animi incidunt optio ipsum deleniti unde, minima provident consequuntur harum assumenda maxime nam necessitatibus soluta?</p>
+            </div>
+            <div class="services-content__serviceBox">
+                <img src="img/seo.svg" alt="">
+                <h2>Seo</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id dolor atque illo fugiat accusantium dolorem animi incidunt optio ipsum deleniti unde, minima provident consequuntur harum assumenda maxime nam necessitatibus soluta?</p>
+            </div>
+            <div class="services-content__serviceBox">
+                <img src="img/trafiquer.svg" alt="">
+                <h2>Trafiquer</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id dolor atque illo fugiat accusantium dolorem animi incidunt optio ipsum deleniti unde, minima provident consequuntur harum assumenda maxime nam necessitatibus soluta?</p>
+            </div>
+        </div>
 
+    </section>
+    <!-------------------------------------- fin servicios --------------------------------->
+    <!-------------------------------------- Proyectos --------------------------------->
+
+    <section class="proyect adjust" id="proyectos">
+        <div class="titulo">
+            <h2>Proyectos recientes</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing ecessitatibus nemo accusantium iusto sed suscipit cum labore! Eum odio accusamus quia maiores?</p>
+        </div>
+        <div class="protect_content">
+            <div class="trabajoBx">
+                <div class="imgBX">
+                    <img src="img/seo.svg" alt="">
+                </div>
+                <div class="textBx">
+                    <h3>Proyecto 01</h3>
+                </div>
+            </div>
+        
+            <div class="trabajoBx">
+                <div class="imgBX">
+                    <img src="img/seo.svg" alt="">
+                </div>
+                <div class="textBx">
+                    <h3>Proyecto 02</h3>
+                </div>
+            </div>
+
+            <div class="trabajoBx">
+                <div class="imgBX">
+                    <img src="img/seo.svg" alt="">
+                </div>
+                <div class="textBx">
+                    <h3>Proyecto 03</h3>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-------------------------------------- fin proyectos --------------------------------->
+    <!-------------------------------------- contacto --------------------------------->
+    <section class="contact adjust" id="contacto">
+        <div class="titulo">
+            <h2>¡Contactame!</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero, reiciendis!</p>
+        </div>
+        <div class="contactform">
+            <div class="linea">
+                <input type="text" name="" placeholder="Nombre">
+                <input type="text" name="" placeholder="Apellido">                
+            </div>
+            <div class="linea">
+                <input type="text" name="" placeholder="Email">
+                <input type="text" name="" placeholder="No. telefonico">                
+            </div>
+            <div class="linea2">
+                <textarea placeholder="Mensaje"></textarea>              
+            </div>
+            <div class="linea2">
+               <input type="submit" value="Enviar">              
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------- fin contacto --------------------------------->
+    <!-------------------------------------- copyright--------------------------------->
+    <div class="copyright">
+        <p> copyright© 2021 Ronal Diaz. Todos los derechos reservados</p>
+    </div>
 
         </div>
     </div>   
