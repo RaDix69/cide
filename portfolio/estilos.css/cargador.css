@@ -6,8 +6,8 @@ body{
     align-items: center;
     box-sizing: border-box;
     background: #0E0B16;
-    font-family: 'Scheherazade New', serif;
-    font-size: 1.2em;
+    font-family: 'Lora', serif;
+    font-size: 1.1 em;
 }
 :root{
     --white: #E7DFDD;
@@ -21,13 +21,29 @@ body{
 
 
 }
-
-
 body{
     overflow-x: hidden;
     scroll-behavior: smooth;
 
 }
+/* ----------------------------------------barra de progreso ------------------------------------------ */
+
+body::-webkit-scrollbar{
+    width: 2px;
+    background:var(--azul);
+    
+}
+body::-webkit-scrollbar-thumb{
+   background: var(--fuschia);
+   animation: animate 0.5s linear infinite;
+   border-radius: 5px;
+  
+}
+
+
+
+/* ---------------------------------------- fin barra de progreso ------------------------------------------ */
+
 /* ----------------------------------------cargador ------------------------------------------ */
 .div-cargador{
     background: var(--black);
@@ -119,6 +135,8 @@ body{
     display: flex;
     justify-content: space-between;
     border-right: 1px solid rgba(255, 255, 255,.05);
+    box-shadow: 0 0 0.45em var(--fuschia), 0 0 1.25em var(--fuschia);
+
     align-items: center;
     overflow: hidden;
     z-index:1;
@@ -146,6 +164,8 @@ body{
     text-transform: uppercase;
     text-decoration: none;
     color:var(--fuschia);
+    text-shadow: 0 0 0.15em var(--fuschia), 0 0 0.25em var(--fuschia);
+
     font-weight: 500;
     letter-spacing: 2px;
     opacity: 0.8;
@@ -199,6 +219,8 @@ body{
     background:var(--black2);
     border-left: 1px solid rgba(255, 255, 255,.05);
     border-bottom: 1px solid rgba(255, 255, 255,.05);
+    box-shadow: 0 0 0.25em var(--fuschia), 0 0 .5em var(--fuschia);
+
     height: 60px ;
     padding: 0 40px;
     display: flex;
@@ -214,6 +236,8 @@ body{
     font-size: 1.4;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 0 0 0.45em var(--fuschia), 0 0 1.25em var(--fuschia);
+    
 }
 .contenido-main .contenido-main__topbar .contenido-main-topbar-toggle{
     position: relative;
@@ -222,6 +246,9 @@ body{
     right: 50px;
     cursor: pointer;
     color: var(--fuschia);
+    text-shadow: 0 0 0.45em var(--fuschia), 0 0 1.25em var(--fuschia);
+
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -256,6 +283,8 @@ section{
     overflow:hidden ;
     border-radius: 50%;
     margin-bottom: 20px;
+    box-shadow: 0 0 0.45em var(--fuschia), 0 0 1.25em var(--fuschia);
+    
 }
 .banner .banner-contenedor__imgBx img{
     position: absolute;
@@ -301,6 +330,8 @@ h3{
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, .05);
+    box-shadow: 0 0 0.45em var(--fuschia), 0 0 1.25em var(--fuschia);
+
     margin: 5px;
     display: flex;
     justify-content: center;
@@ -312,6 +343,8 @@ h3{
 .banner__socialMedia li a:hover{
     background: var(--fuschia);
     color: var(--black);
+  
+
 }
 .adjust{
     position: relative;
@@ -390,6 +423,8 @@ h3{
     margin-bottom: 10px;
     font-weight: 600;
     color: var(--fuschia);
+    text-shadow: 0 0 0.25em var(--fuschia), 0 0 0.5em var(--fuschia);
+
     text-align: center;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -413,6 +448,7 @@ h3{
 }
 .proyect .protect_content .trabajoBx .imgBX{
     position: relative;
+    size: cover;
     width: 100%;
     height: 100%;
     transform: translateY(0);
@@ -422,12 +458,12 @@ h3{
     transform: translateY(-100%);
 }
 .proyect .protect_content .trabajoBx .imgBX img{
-    position: relative;
+    position: center;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: center;
 }
 
 .proyect .protect_content .trabajoBx .textBx{
@@ -492,6 +528,8 @@ h3{
     background: var(--azul);
     font-size: 18px;
     border: 1px solid var(--fuschia);
+    box-shadow: 0 0 0.25em var(--fuschia), 0 0 0.45em var(--fuschia);
+
     
 }
 ::placeholder{
@@ -534,8 +572,10 @@ h3{
 /* -------------------------------------copyright---------------------------*/
 
 .copyright{
+    width: 100%;
     margin-top: 10px;
     border-top:1px solid var(--fuschia) ;
+    box-shadow: 0 0 0.45em var(--fuschia), 0 0 1.25em var(--fuschia);
     position: relative;
     bottom: 0;
     padding:10px 40px ;
@@ -547,10 +587,9 @@ h3{
 @media(max-width: 992px)
 {
     .contenido-nav{
-        left: -100%;
+        left: -90%;
     }
     .contenido-nav.active{
-        left: 0;
         width: 100%;
     }
     .contenido-main.active{

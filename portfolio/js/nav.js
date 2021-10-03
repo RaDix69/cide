@@ -12,12 +12,12 @@ toggle.onclick = function(){
 }
 
 //////// arreglo de nav resposive /////////
-function toggleMenu(){
+/*function toggleMenu(){
     let toggle = document.querySelector('.contenido-main-topbar-toggle');
     let nav = document.querySelector('.contenido-nav');
     let main = document.querySelector('.contenido-main');
-    toggle.classList.remove('active');
+    toggle.classList.toggle('active');
     nav.classList.remove('active');
     main.classList.remove('active');
 
-}
+}*/
