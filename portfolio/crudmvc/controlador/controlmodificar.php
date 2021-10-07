@@ -19,7 +19,6 @@ require('../vista/indexmodificar.php');
 require('../dao/DaoPersonaimpl.php');
 $dao=new DaoPersonaImpl();
 if (isset($_GET['boton'])) {
-    $personalist=[];
     $id=$_GET['id'];
     $Nombre=$_GET['nombre'];    
     $apellido1=$_GET['apellido1'];
@@ -28,9 +27,8 @@ if (isset($_GET['boton'])) {
     $contrasena=$_GET['contrasena'];
     $tipo=$_GET['tipo']; 
     $a=new Persona($id,$Nombre,$apellido1,$apellido2,$correo,$contrasena,$tipo);
-    array_push($personalist,$a);
-    $dao->modificar($personalist);
-    echo "REGISTRO INSERTADO CON EXITO";
+    $dao->modificar($a);
+    echo "se actualizo correctamente";
 }
            
 ?>    

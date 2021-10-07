@@ -36,23 +36,17 @@ class DaoPersonaImpl extends Conexion implements DaoPersona{
         $correo=$a->getcorreo();
         $contrasena=$a->getcontrasena();
         $tipo=$a->gettipo();
-        $stmt=$this->getCnx()->prepare("UPDATE personas " .
-        "SET nombre =$nombre," .
-       "apellido1 = $apellido1" .
-       "apellido2 = $apellido2" .
-       "correo = $correo" .
-       "contrasena = $contrasena" .
-       "tipo = $tipo" .
-        "where id =$id");
-     
-         
+        $sql="UPDATE personas
+        SET nombre ='$nombre', apellido1 ='$apellido1', apellido2 = '$apellido2', correo = '$correo', contrasena = '$contrasena', tipo = '$tipo'
+        WHERE id ='$id'";
+        $stmt=$this->getCnx()->prepare($sql);
+        $stmt->execute();
     }
 
     public function eliminar($a){        
         $id=$_GET['id'];
         $stmt=$this->getCnx()->prepare("delete from personas where id=$id");
         $stmt->execute(); 
-
     }
 //public function listar();
 public function listar(){

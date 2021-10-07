@@ -76,7 +76,7 @@ return[
     <!-------------------------------------- topbar --------------------------------->
     <form action="../controlador/controlmodificar.php" method="GET" class="formulario">
     <div class="linea">
-    <input type="hidden" name="id">
+    <h1>Actualizar datos</h1>
     <label for="">id</label>    
     <input type="text" name="id" id="id" class="form-control" value="<?php echo $consulta[0]?>" >
 
