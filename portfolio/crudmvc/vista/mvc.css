@@ -338,3 +338,10 @@ section a{
 ::placeholder{
     color: var(--white);
 }
+.formulario h1{
+    color: var(--white);
+}
+.formulario .linea label{
+    color: var(--white);
+
+}

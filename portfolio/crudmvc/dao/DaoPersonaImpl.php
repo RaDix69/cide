@@ -18,7 +18,8 @@ class DaoPersonaImpl extends Conexion implements DaoPersona{
         $tipo=$a->gettipo();
         $sql="insert into personas values(?,?,?,?,?,?,?)";
         $stmt=$this->getCnx()->prepare($sql);
-        $stmt->execute([$id,$nombre,$apellido1,$apellido2,$correo,$contrasena,$tipo]);        
+        $stmt->execute([$id,$nombre,$apellido1,$apellido2,$correo,$contrasena,$tipo]);  
+     
         } else {
             echo $this->getCnx().' Es nulo <br>';
         }
@@ -43,14 +44,15 @@ class DaoPersonaImpl extends Conexion implements DaoPersona{
        "contrasena = $contrasena" .
        "tipo = $tipo" .
         "where id =$id");
-        $stmt->execute();
+     
          
     }
 
-    public function eliminar(persona $a){        
-        $id=$a->getid();
+    public function eliminar($a){        
+        $id=$_GET['id'];
         $stmt=$this->getCnx()->prepare("delete from personas where id=$id");
-        $stmt->execute();        
+        $stmt->execute(); 
+
     }
 //public function listar();
 public function listar(){

@@ -55,9 +55,10 @@
             </div>
     <!-------------------------------------- topbar --------------------------------->
    <section>
-   
+    
     <form action="../controlador/controlRegistro.php" method="GET" class="formulario">
     <div class="linea">
+    <h1>REGISTRO PERSONA</h1>
  
     <input type="text" name="id" id="id" class="form-control" placeholder="id">
 

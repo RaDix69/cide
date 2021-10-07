@@ -80,8 +80,8 @@
         echo "<td>". $key->getapellido2(). "</td>".'<br>';
         echo "<td>". $key->getcorreo(). "</td>".'<br>';
         echo "<td>". $key->gettipo(). "</td>".'<br>';
-         echo "<td><a href='indexmodificar.php?id=".$key->getid()."'>Actualizar</a></td>";
-         echo "<td><a href='#"."'>Actualizar</a></td>  </tr>";
+        echo "<td><a href='indexmodificar.php?id=".$key->getid()."'>Actualizar</a></td>";
+        echo "<td><a href='../controlador/controleliminar.php?id=".$key->getid()."'>Eliminar</a></td>  </tr>";
     }
     ?>
     <a href="indexinsertar.php" class="registrar">Registrar</a>
