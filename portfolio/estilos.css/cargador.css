@@ -486,6 +486,11 @@ h3{
 .proyect .protect_content .trabajoBx .textBx h3{
     color: #000;
     font-size: 1em;
+
+}
+.proyect .protect_content .trabajoBx .textBx h3 a{
+    text-decoration: none;
+
 }
 /* ------------------------------------- fin proyectos---------------------------*/
 /* -------------------------------------contacto---------------------------*/
