@@ -24,40 +24,6 @@ class persona{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 class Aprendiz extends persona{
     constructor(nombre,apellido,programa,ficha){
     super(nombre,apellido);
@@ -84,7 +50,7 @@ datosCompletos(){
 }
 
 
-var ap=new Aprendiz('Luis','Castro','ADSI',2142329);
+var ap=new Aprendiz('Luis','Castro','contabilidad',2142330);
 console.log(ap.datosCompletos());
 
 

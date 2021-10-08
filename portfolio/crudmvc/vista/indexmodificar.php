@@ -54,14 +54,14 @@ return[
     <!-------------------------------------- fin del cargador --------------------------------->
    
 <div id="div-contenido" class="hide">
-        <div class="contenido-nav">
-             <ul>
-                <li><a href="http://localhost/cide/portfolio#banner"  onclick="toggleMenu();">Home</a></li>
-                <li><a href="http://localhost/cide/portfolio/#about"  onclick="toggleMenu();">About</a></li>
-                <li><a href="http://localhost/cide/portfolio/#services"  onclick="toggleMenu();">Servicios</a></li>
-                <li><a href="http://localhost/cide/portfolio/#proyectos"  onclick="toggleMenu();">Proyectos</a></li>
-                <li><a href="http://localhost/cide/portfolio/#contacto"  onclick="toggleMenu();">Contacto</a></li>
-                <li><a href="http://localhost/cide/portfolio/crudmvc/vista/index.php"  onclick="toggleMenu();">mvc</a></li>
+<div class="contenido-nav">
+            <ul>
+                <li><a href="../../index.html/#banner"  onclick="toggleMenu();">Home</a></li>
+                <li><a href="../../index.html/#about"  onclick="toggleMenu();">About</a></li>
+                <li><a href="../../index.html/#services"  onclick="toggleMenu();">Servicios</a></li>
+                <li><a href="../../index.html/#proyectos"  onclick="toggleMenu();">Proyectos</a></li>
+                <li><a href="../../index.html/#contacto"  onclick="toggleMenu();">Contacto</a></li>
+                <li><a href="crudmvc/vista/index.php""  onclick="toggleMenu();">mvc</a></li>
             </ul>
         </div>
     <!-------------------------------------- fin nav --------------------------------->
