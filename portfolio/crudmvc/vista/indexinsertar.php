@@ -41,7 +41,7 @@
                 <li><a href="../../index.html#services"  onclick="toggleMenu();">Servicios</a></li>
                 <li><a href="../../index.html#proyectos"  onclick="toggleMenu();">Proyectos</a></li>
                 <li><a href="../../index.html#contacto"  onclick="toggleMenu();">Contacto</a></li>
-                <li><a href="crudmvc/vista/index.php""  onclick="toggleMenu();">mvc</a></li>
+                <li><a href="crudmvc/vista/index.php"  onclick="toggleMenu();">mvc</a></li>
             </ul>
         </div>
     <!-------------------------------------- fin nav --------------------------------->
@@ -56,7 +56,7 @@
     <!-------------------------------------- topbar --------------------------------->
    <section>
     
-    <form action="../controlador/controlRegistro.php" method="GET" class="formulario">
+    <form action="../controlador/controlRegistro.php" method="post" class="formulario">
     <div class="linea">
     <h1>REGISTRO PERSONA</h1>
  
@@ -79,6 +79,7 @@
     </form>
     </div>  
     </section>  
+    <?php include '../controlador/controlRegistro.php'; ?>
 </body>
 <script src="../../js/cargador.js" language="javascript" type="text/javascript"></script>
 <script src="../../js/nav.js" language="javascript" type="text/javascript"></script>

@@ -14,21 +14,20 @@
 </head>
 <body>
 <?php 
-require('../vista/indexinsertar.php');
-require('../dao/DaoPersonaimpl.php');
+include('../dao/DaoPersonaimpl.php');
 $dao=new DaoPersonaImpl();
-if (isset($_GET['boton'])) {
-    $id=$_GET['id'];
-    $Nombre=$_GET['nombre'];    
-    $apellido1=$_GET['apellido1'];
-    $apellido2=$_GET['apellido2'];
-    $correo=$_GET['correo'];
-    $contrasena=$_GET['contrasena'];
-    $tipo=$_GET['tipo'];
+if (isset($_POST['boton'])) {
+    $id=$_POST['id'];
+    $Nombre=$_POST['nombre'];    
+    $apellido1=$_POST['apellido1'];
+    $apellido2=$_POST['apellido2'];
+    $correo=$_POST['correo'];
+    $contrasena=$_POST['contrasena'];
+    $tipo=$_POST['tipo'];
     $a=new Persona($id,$Nombre,$apellido1,$apellido2,$correo,$contrasena,$tipo);
     $dao->registrar($a);
-   
     echo "REGISTRO INSERTADO CON EXITO";
+    header('location: ../vista/index.php');
 }
            
 ?>    

@@ -72,7 +72,6 @@
     </div>
     <?php 
     require('../controlador/controlistar.php');
-
     foreach ($personas as $key) {
         echo "<tr><td>". $key->getid(). "</td>".'<br>';
         echo "<td>".$key->getNombre(). "</td>".'<br>';
@@ -81,7 +80,7 @@
         echo "<td>". $key->getcorreo(). "</td>".'<br>';
         echo "<td>". $key->gettipo(). "</td>".'<br>';
         echo "<td><a href='indexmodificar.php?id=".$key->getid()."'>Actualizar</a></td>";
-        echo "<td><a href='../controlador/controleliminar.php?id=".$key->getid()."'>Eliminar</a></td>  </tr>";
+        echo "<td><a href='index.php?id=".$key->getid()."'>Eliminar</a></td>  </tr>";
     }
     ?>
     <a href="indexinsertar.php" class="registrar">Registrar</a>
@@ -89,6 +88,19 @@
     </table>
     </section>
 </div>    
+<?php 
+
+
+$dao=new DaoPersonaImpl();
+if (isset($_GET['id'])) {
+    $id=$_GET['id'];
+    $a=$id;
+    $dao->eliminar($a);
+    header("location: ../vista/index.php");
+}
+           
+?>    
+</body>
 </body>
 <script src="../../js/cargador.js" language="javascript" type="text/javascript"></script>
 <script src="../../js/nav.js" language="javascript" type="text/javascript"></script>

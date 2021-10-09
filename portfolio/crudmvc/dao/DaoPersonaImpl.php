@@ -19,7 +19,6 @@ class DaoPersonaImpl extends Conexion implements DaoPersona{
         $sql="insert into personas values(?,?,?,?,?,?,?)";
         $stmt=$this->getCnx()->prepare($sql);
         $stmt->execute([$id,$nombre,$apellido1,$apellido2,$correo,$contrasena,$tipo]);  
-     
         } else {
             echo $this->getCnx().' Es nulo <br>';
         }

@@ -74,7 +74,7 @@ return[
                 </div>
             </div>
     <!-------------------------------------- topbar --------------------------------->
-    <form action="../controlador/controlmodificar.php" method="GET" class="formulario">
+    <form action="../controlador/controlmodificar.php" method="post" class="formulario">
     <div class="linea">
     <h1>Actualizar datos</h1>
     <label for="">id</label>    
@@ -102,6 +102,9 @@ return[
     </form>
     </div>     
 </body>
+<?php 
+include('../controlador/controlmodificar.php');
+?>
 <script src="../../js/cargador.js" language="javascript" type="text/javascript"></script>
 <script src="../../js/nav.js" language="javascript" type="text/javascript"></script>
 <script src="https://code.jquery.com/jqery-3.4.1.js"></script>
