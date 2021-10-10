@@ -1,4 +1,5 @@
 1. la carpeta a utilizar es portfolio
-2. en ella se encontrara el archivo sql de la base de datos llamador "nosviveref", se debe crear una base de datos nueva en el phpmyadmin con el nombre "nosviveref" y proceder a importar el archivo
-deberia quedar creada una tabla personas
-3. la pagina de inicio esta en la carpeta portfolio y esta es llamada index.html esto se abre con el local host
+2. en ella se encontrara el archivo sql de la base de datos llamador "nosviveref", se debe crear una base de datos nueva en el http://localhost/phpmyadmin/ con el nombre "nosviveref" oprimiendo en nueva y proceder a importar el archivo
+"nosviveref" deberia quedar creada una tabla personas
+3. la pagina de inicio esta en la carpeta portfolio y esta es llamada index.html esto se abre con el localhost
+4. importante hacer estos pasos antes de abrir el crud
