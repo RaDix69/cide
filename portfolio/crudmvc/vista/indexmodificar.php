@@ -99,8 +99,12 @@ return[
     <input type="text" name="tipo" id="tipo" value="<?php echo $consulta[6]?>">
 
     <input type="submit" name="boton" value="Insertar Registro" class="btn btn-primary" >
+    <input type="submit" name="boton" value="Regresar" class="btn btn-primary" >
+
     </form>
-    </div>     
+    
+    </div> 
+</div>    
 </body>
 <?php 
 include('../controlador/controlmodificar.php');

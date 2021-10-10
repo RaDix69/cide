@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../estilos.css/cargador.css">
+        <link rel="stylesheet" href="estilo.css">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="img/logo.png" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Portfolio</title>
+    </head>
+<body>
+
+
+    <!--------------------------------------scroll bar --------------------------------->
+    <div id="scroll" class="scroll">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-------------------------------------- fin scroll bar --------------------------------->
+
+    <!--------------------------------------cargador --------------------------------->
+    <div id="div-cargador" class="div-cargador">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-------------------------------------- fin del cargador --------------------------------->
+   
+
+    <div id="div-contenido" class="hide">
+        <div class="contenido-nav">
+            <ul>
+                <li><a href="../index.html#banner"  onclick="toggleMenu();">Home</a></li>
+                <li><a href="../index.html#about"  onclick="toggleMenu();">About</a></li>
+                <li><a href="../index.html#services"  onclick="toggleMenu();">Servicios</a></li>
+                <li><a href="../index.html#proyectos"  onclick="toggleMenu();">Proyectos</a></li>
+                <li><a href="../index.html#contacto"  onclick="toggleMenu();">Contacto</a></li>            
+                <li><a href="../crudmvc/vista/index.php"  onclick="toggleMenu();">CRUD</a></li>
+                <li><a href="../funcionesjs/index.html"  onclick="toggleMenu();">JS</a></li>
+                <li><a href="../manualUsuarios/manual.html"  onclick="toggleMenu();">manual Usuarios</a></li>
+            </ul>
+        </div>
+    <!-------------------------------------- fin nav --------------------------------->
+        <div class="contenido-main">
+    <!-------------------------------------- topbar --------------------------------->
+            <div class="contenido-main__topbar">
+                <a href="#" class="contenido-main-topbar__logo">Portfolio</a>
+                <div class="contenido-main-topbar-toggle">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+            </div>
+    <!-------------------------------------- topbar --------------------------------->
+        <section>
+            <div class="operaciones">
+                <pre>
+                    <h2>FUNCIONES FLECHA</h2>
+                    var vec=(array,tam)=>{
+                        for (let i = 0; i < tam; i++) {
+                            array.push(Math.round(Math.random()*100));         
+                        }
+                        return array;
+                    }
+                    v=[];
+                    x=5;
+                    
+                    /*       ----------------------- promedio -------------- */
+                    /*console.log(vec(v,x));*/
+                    var arr= vec(v,x); 
+                    arr = [15,8,11,2,19];
+                    let suma = arr.reduce((previous, current) => current += previous);
+                    let avg = suma/arr.length;
+                    console.log(avg);
+                    
+                    
+                    
+                    /* ----------------- mediana --------------------- */
+                    /*
+                    var arr= vec(v,x); 
+                    arr.sort((a, b) => a - b);
+                    let manoyor = Math.floor((arr.length - 1) / 2);
+                    let mayorigual = Math.ceil((arr.length - 1) / 2);
+                    let mediana = (arr[manoyor] + arr[mayorigual]) / 2;
+                    console.log(mediana);
+                    */
+                    
+                    
+                    /* ----------------- minimo --------------------- */
+                    /*
+                    var arr = vec(v,x);
+                    let mayor = (a)=> Math.min.apply(null,a);
+                    console.log(vec(v,x));
+                    console.log(mayor(arr));
+                    */
+                    /* ----------------- maximo --------------------- */
+                    /*
+                    var arr = vec(v,x);
+                    let mayor = (a)=> Math.max.apply(null,a);
+                    console.log(vec(v,x));
+                    console.log(mayor(arr));
+                    */
+
+                <h2>Fracciones</h2>
+
+                var fraccion={
+                    numerador1:8,
+                     numerador2:8,
+                      denominador1:4, 
+                      denominador2:4,
+                                sumafunction(numerador1,numerador2,denominador1,denominador2){
+                                    if (denominador1==denominador2) {
+                                        let r1=numerador1+numerador2;
+                                            respuesta=r1/denominador1;
+                                    }else{
+                                        let r1=numerador1*denominador2;
+                                         r2=numerador2*denominador1;
+                                         r3=denominador1*denominador2;
+                                        var s=r1+r2;
+                                            respuesta=s/r3;
+                                    }
+                                    return respuesta;
+                                },
+                                restafunction(){
+                                    if (denominador1==denominador2) {
+                                        let r1=numerador1-numerador2;
+                                            respuesta=r1/denominador1;
+                                    }else{
+                                        let r1=numerador1*denominador2;
+                                            r2=numerador2*denominador1;
+                                            r3=denominador1*denominador2;
+                                        var s=r1-r2;
+                                            respuesta=s/r3;
+                                    }
+                                    return respuesta;
+                                },
+                                multfunction(){
+                                    let r1=this.numerador1*this.numerador2;
+                                        r2=this.denominador1*this.denominador2;
+                                    var respuesta=r1/r2;
+                            
+                                    return respuesta;
+                                },
+                                divfunction(){
+                                    let r1=this.numerador1*this.denominador2;
+                                        r2=this.denominador1*this.numerador2;
+                                    var respuesta=r1/r2;
+                            
+                                    return respuesta;
+                                }
+                            }       
+                            var a=fraccion.sumafunction();
+                            console.log(a);        ///////// aparece NAN
+            
+                            <h2>UML PERSONAS</h2>
+                            class Persona{    
+                                constructor(cedula, nombre, apellido){
+                                    this._cedula=cedula;
+                                    this._nombre=nombre;
+                                    this._apellido=apellido;
+                                }
+                                set cedula(cedula){
+                                    this._cedula=cedula;
+                                }
+                                get cedula(){
+                                    return this._cedula;
+                                }
+                                set nombre(nombre){
+                                    this._nombre=nombre;
+                                }
+                                get nombre(){
+                                    return this._nombre;
+                                }
+                                set apellido(apellido){
+                                    this._apellido=apellido;
+                                }
+                                get apellido(){
+                                    return this._apellido;
+                                }
+                                nombreCompleto(){
+                                    return this._nombre+' '+this._apellido;
+                                }  
+                            }
+                            
+                            class Cliente extends Persona{
+                                constructor(cedula, nombre, apellido, idCliente){
+                                    super(cedula, nombre, apellido);
+                                    this._idCliente=idCliente;
+                                }
+                                set idCliente(idCliente){
+                                    this._idCliente=idCliente;
+                                }
+                                get idCliente(){
+                                    return this._idCliente;
+                                }
+                                infocliente(){
+                                    return this._nombre+' '+ this._apellido+', con cédula '+ this._cedula+ ', e id '+ this._idCliente;
+                                }
+                            }
+                            
+                            class Empleado extends Persona{
+                                constructor(cedula, nombre, apellido, idEmpleado, legajo){
+                                    super(cedula, nombre, apellido);
+                                this._idEmpleado=idEmpleado;
+                                this._legajo=legajo;
+                                }
+                                get idEmpleado(){
+                                    return this._idEmpleado;
+                                }
+                                set idEmpleado(idEmpleado){
+                                    this._idEmpleado=idEmpleado;
+                                }
+                                get legajo(){
+                                    return this._legajo;
+                                }
+                                set legajo(legajo){
+                                    this._legajo=legajo;
+                                }
+                                infoEmpleado(){
+                                    return this._nombre+' '+ this._apellido+', con cédula '+ this._cedula+ ', id '+ this._idEmpleado +
+                                     ' y legajo '+this._legajo;
+                                }
+                            }
+                            
+                            class Ventas{
+                                constructor(idVenta,venta){
+                                    this._idVenta=idVenta;
+                                    this._venta=venta;
+                                }
+                            }
+                            
+                            //Creación de Clientes
+                            var cli1=new Cliente(1001010,"Santiago","Sierra",1);
+                            var cli2=new Cliente(1002020,"Andrés","Marciano",2);
+                            
+                            //Creación de Empleados
+                            var emp1=new Empleado(1003030,"José","Miraflores",1,10);
+                            
+                            //Creación de Ventas
+                            var ventas=[];
+                            
+                            var ventas2=[];
+                            
+                            ventas.push(cli1,emp1);
+                            ventas2.push(cli2,emp1);
+                            
+                            var venta1=new Ventas(1,ventas);
+                            var venta2=new Ventas(2,ventas2);
+                            
+                            //Una Venta está compuesta por un empleado y un cliente
+                            console.log(venta1);
+                            console.log(venta2);
+                </pre>
+            </div>
+        </section>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+</body>
+<script src="fun.js" language="javascript" type="text/javascript"></script>
+<script src="../js/cargador.js" language="javascript" type="text/javascript"></script>
+<script src="../js/nav.js" language="javascript" type="text/javascript"></script>
+<script src="https://code.jquery.com/jqery-3.4.1.js"></script>
+
+</html>

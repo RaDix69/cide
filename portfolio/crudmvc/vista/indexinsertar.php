@@ -75,6 +75,7 @@
     <input type="text" name="tipo" id="tipo" placeholder="tipo">
 
     <input type="submit" name="boton" value="Insertar Registro" class="btn btn-primary">
+    <a href="index.php" style="color:#fff;">regresar</a>
     </div>
     </form>
     </div>  

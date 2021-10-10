@@ -345,3 +345,7 @@ section a{
     color: var(--white);
 
 }
+.contenido-main .linea .regresar{
+    background: var(--fuschia);
+    width: 100%;
+}

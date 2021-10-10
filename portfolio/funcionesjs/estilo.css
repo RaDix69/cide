@@ -1,0 +1,12 @@
+.operaciones{
+    color: var(--white);
+    border-radius: 10px;
+    margin-top: 100px;
+    width: 1000px;
+    margin-left: 100px;
+    background:rgba(255, 255, 255,0.2);
+}
+.operaciones h2{
+    margin-left:50px;
+    color: var(--fuschia);
+}
