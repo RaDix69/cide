@@ -3,3 +3,4 @@
 "nosviveref" deberia quedar creada una tabla personas
 3. la pagina de inicio esta en la carpeta portfolio y esta es llamada index.html esto se abre con el localhost
 4. importante hacer estos pasos antes de abrir el crud
+5. abrir el archivo index.html el cual se encuentra en la carpeta portflio
