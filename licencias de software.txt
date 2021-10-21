@@ -1,0 +1,3 @@
+freewar:uTorrent,Windows Media Player,Opera Browser,Linux
+shareware:Winrar,avast,demos de juegos
+software libre: ares,mozilla,apache
